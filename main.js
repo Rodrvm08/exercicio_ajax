@@ -39,20 +39,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     fetchGitHubData();
-
-    fetch('https://api.github.com/users/Rodrvm08')
-        .then(function(res) {
-            return res.json();
-        })
-        .then(function(json) {
-            nameElement.innerText = json.name;
-            usernameElement.innerText = json.login;
-            avatarElement.innerText = json.avatar_url;
-            reposElement.innerText = json.public_repos;
-            followersElement.innerText = json.followers;
-            followingElement.innerText = json.following;
-            linkElement.href = json.html_url
-        })
-
-
 })
